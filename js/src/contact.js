@@ -27,7 +27,7 @@ var contact_submit = function( form ) {
 
 	// check the names
 	if ( field.name.length < 2 ) {
-		errors.push( "Please provide a first name." );
+		errors.push( "Please provide a name." );
 	}
 
 	// check cu_name
@@ -41,6 +41,8 @@ var contact_submit = function( form ) {
 		// send form values to our PHP handler.
 		$.post( "/send.php", url_params, function( response ){
 			
+			console.log( response );
+
 			if ( response === "success" ) {
 				// if success is returned, redirect to thanks page.
 				location.href = "/thanks.html";
