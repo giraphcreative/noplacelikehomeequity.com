@@ -106,6 +106,7 @@ header {
 	
 	@include respond-to( 768px ) { 
 		font-size: 1.2em;
+		min-height: 460px;
 
 		img {
 			margin-top: 20px;
